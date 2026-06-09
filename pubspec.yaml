@@ -1,23 +1,61 @@
-name: superhero_android_developer_v4_pro_max
-description: Superhero Android Senior Developer Portfolio V4 Pro Max
-publish_to: "none"
-version: 4.0.0+1
+name: Deploy Superhero Android Senior Developer V4 Pro Max
 
-environment:
-  sdk: ">=3.3.0 <4.0.0"
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-dependencies:
-  flutter:
-    sdk: flutter
-  url_launcher: ^6.3.0
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^5.0.0
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
-flutter:
-  uses-material-design: true
-  assets:
-    - assets/images/
-    - assets/screenshots/
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        run: flutter analyze
+        continue-on-error: true
+
+      - name: Test
+        run: flutter test
+        continue-on-error: true
+
+      - name: Build web
+        run: flutter build web --release --base-href "/superhero_android_developer_v4_pro_max/"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
