@@ -100,3 +100,21 @@ assets/
 
 git clone https://github.com/YOUR_GITHUB_USERNAME/superhero_android_developer_v4_pro_max.git
 cd superhero_android_developer_v4_pro_max
+
+
+. Install dependencies
+flutter pub get
+3. Add assets
+Put your screenshots here:
+assets/screenshots/
+Put your profile or branding images here:
+assets/images/
+4. Update project data
+Edit:
+lib/data/sample_projects.dart
+
+5. Run locally
+flutter run -d chrome
+Build for Web
+flutter build web --release --base-href "/superhero_android_developer_v4_pro_max/"
+
