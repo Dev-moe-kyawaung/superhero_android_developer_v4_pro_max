@@ -1,7 +1,7 @@
 # Superhero Android Senior Developer V4 Pro Max
 
-[![Deploy Status](https://github.com/YOUR_GITHUB_USERNAME/superhero_android_developer_v4_pro_max/actions/workflows/deploy.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/superhero_android_developer_v4_pro_max/actions/workflows/deploy.yml)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Deploy-blue?logo=github)](https://YOUR_GITHUB_USERNAME.github.io/superhero_android_developer_v4_pro_max/)
+[![Deploy Status](https://github.com/Dev-Moe-kyawaung/superhero_android_developer_v4_pro_max/actions/workflows/deploy.yml/badge.svg)](https://github.com/Dev-Moe-kyawaung/superhero_android_developer_v4_pro_max/actions/workflows/deploy.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Deploy-blue?logo=github)](https://Dev-Moe-kyawaung.github.io/superhero_android_developer_v4_pro_max/)
 [![Flutter](https://img.shields.io/badge/Flutter-3.3%2B-02569B?logo=flutter)](https://flutter.dev)
 [![Material 3](https://img.shields.io/badge/Material%203-Enabled-6750A4?logo=materialdesign)](https://m3.material.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -23,8 +23,8 @@ Built to showcase flagship Android projects, measurable impact, premium motion, 
 
 ## Live Site
 
-- **Portfolio:** `https://YOUR_GITHUB_USERNAME.github.io/superhero_android_developer_v4_pro_max/`
-- **Repository:** `https://github.com/YOUR_GITHUB_USERNAME/superhero_android_developer_v4_pro_max`
+- **Portfolio:** `https://Dev-Moe-kyawaung.github.io/superhero_android_developer_v4_pro_max/`
+- **Repository:** `https://Dev-Moe-kyawaung.github.io/superhero_android_developer_v4_pro_max/`
 
 ## Featured Projects
 
@@ -98,23 +98,27 @@ assets/
 
 ##1. Clone the repository
 
-git clone https://github.com/YOUR_GITHUB_USERNAME/superhero_android_developer_v4_pro_max.git
-cd superhero_android_developer_v4_pro_max
+-`git clone https://github.com/Dev-Moe-kyawaung/superhero_android_developer_v4_pro_max.git`
+-`cd superhero_android_developer_v4_pro_max`
 
+##2. Install dependencies
 
-. Install dependencies
-flutter pub get
-3. Add assets
-Put your screenshots here:
+-`flutter pub get`
+
+##3. Add assets
+
+-`Put your screenshots here:
 assets/screenshots/
 Put your profile or branding images here:
-assets/images/
-4. Update project data
-Edit:
-lib/data/sample_projects.dart
+assets/images/`
 
-5. Run locally
-flutter run -d chrome
-Build for Web
-flutter build web --release --base-href "/superhero_android_developer_v4_pro_max/"
+##4. Update project data Edit:
+
+-`lib/data/sample_projects.dart`
+
+##5. Run locally
+
+-`flutter run -d chrome
+  Build for Web`
+-`flutter build web --release --base-href "/superhero_android_developer_v4_pro_max/`
 
